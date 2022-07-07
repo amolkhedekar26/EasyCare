@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" id="id_username" name="username">
+        <input type="text" id="id_email" name="email">
+        <input type="password" id="id_password1" name="password1">
+        <input type="password" id="id_password2" name="password2">
+
+        <input type="submit" class="button btn-primary" />
+    </form>
+</body>
+</html>

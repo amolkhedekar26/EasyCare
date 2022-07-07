@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid ">
+        <h1 align="center"><span class=" badge badge-success mt-3 mb-2">{{ ho.h_name }}</span></h1>
+</div>
+<br>
+<div style="margin-left: 80px" class="mt-2">
+        <div class="row">
+                <div class="col">
+                        <h2 style="margin-left: 200px"><span class="mb-2 badge badge-warning">Details:
+                                </span></h2>
+                        <h4 style="margin-left: 70px"><span class=" badge badge-danger">Address :
+                                </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ ho.h_address }}
+                        </h4>
+                        <br>
+                        <h4 style="margin-left: 70px"><span class=" badge badge-danger">Contact No:
+                                </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ ho.h_contact }}
+                        </h4>
+                        <br>
+                        <h4 style="margin-left: 70px"><span class=" badge badge-danger">Speciality :
+                                </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ ho.h_speciality }}
+                        </h4>
+                        <br>
+                        <h4 style="margin-left: 70px"><span class=" badge badge-danger">Location:
+                                </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ ho.h_location }}
+                        </h4>
+                        <br>
+                        <h4 style="margin-left: 70px"><span class=" badge badge-danger">Time:
+                                </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ ho.h_time}}
+                        </h4>
+                        <br>
+                        <h4 style="margin-left: 70px"><span class=" badge badge-danger">Rating:
+                                </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ ho.h_rating }}
+                        </h4>
+                        <br>
+                        <h4 style="margin-left: 70px"><span class=" badge badge-danger">No of Doctors:
+                                </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ ho.h_noofdoctors }}</h4>
+                </div>
+                <div class="col">
+                        <h2 style="margin-left: 200px"><span class=" badge badge-warning">Services:
+                                </span></h2>
+                        {% for se in service %}
+                        <h4 style="margin-left: 120px" class="mb-4">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=" badge badge-danger">
+                                        {{ se.s_name }}
+                                </span>
+                        </h4>
+                        {% endfor %}
+                </div>
+        </div>
+</div>
+<br>
+<br>
+{% endblock %}

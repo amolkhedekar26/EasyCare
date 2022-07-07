@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<a href="/medicine"> <span style="margin-left: 70px;width: 50px"><i class="fas fa-arrow-left fa-lg"
+            style="color: darkorchid"></i></span></a>
+<h2 class="my-4" align="center"><span class="badge badge-pill badge-info"> Medicines</span> </h2>
+<div class="container">
+    <div class="row">
+        {% for medicine in medis %}
+        <div class="card mx-auto my-3 mb-4 " style=" width: 300px; border-radius: 12%; background-color: #F8F9FA">
+            {% if medicine.is_syrup %}
+            <img class="card-img-top mt-2 mx-auto" style="width:60px;border-radius: 50%;object-fit: cover;"
+                src="{% static 'images/1976881.svg' %}" alt="Card image cap">
+            {% else %}
+            <img class="card-img-top mt-2 mx-auto" style="width:60px;object-fit: cover;"
+                src="{% static 'images/822143.svg' %}" alt="Card image cap">
+            {% endif %}
+            <div class="card-body"><span class="badge badge-dark">{{ forloop.counter }}</span>
+                <h3 class="card-title text-center" style="color: crimson">{{ medicine.med_name }}</h3>
+                <p class="card-text text-center" style="font-style: italic">Brand - {{ medicine.med_brand }}
+                </p>
+                <p class="card-footer badge-success  "
+                    style="font-size:18px;width:fit-content;margin-left: 80px; height:40px;color:floralwhite;">
+                    <b> {{ medicine.med_disaese }}</b>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock %}

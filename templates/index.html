@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+  .amol1:hover {
+    transform: translateY(-8px) scale(1.005) translateZ(0);
+    border-radius: 8%;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    transition: transform 0.5s;
+    color: white;
+    font-size: 20px;
+  }
+
+  .amol2:hover {
+    transform: translateY(-8px) scale(1.005) translateZ(0);
+    border-radius: 8%;
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+    transition: transform 0.5s;
+    color: #fa709a;
+    font-size: 20px;
+  }
+
+  .amol3:hover {
+    transform: translateY(-8px) scale(1.005) translateZ(0);
+    border-radius: 8%;
+    background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+    transition: transform 0.5s;
+    color: #fa709a;
+    font-size: 20px;
+  }
+
+  .amol4:hover {
+    transform: translateY(-8px) scale(1.005) translateZ(0);
+    border-radius: 8%;
+    background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+    transition: transform 0.5s;
+    color: white;
+    font-size: 20px;
+  }
+</style>
+<div class="mybag"
+  style="background-image: url('/static/images/mybanner.jpg');background-repeat: no-repeat;background-size: cover;height: 550px;">
+  <br><br><br><br><br><br><br><br><br><br>
+</div>
+<div style="background-color:transparent">
+  <h1 align="center"><span class="badge badge-success badge-pill mt-5">Our Services</span></h1>
+  <div class="  p-4 mt-3 mb-4  ">
+    <div class="row ">
+      <div class="card mx-auto mb-4 border-0 amol1" style="width: 18rem;">
+        <img class="card-img-top mx-auto" style="width: 161px" src="{% static 'images/oie_7214054I58toYBc.gif' %}"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">Need a Hospital ?</h5>
+          <p class="card-text text-center">We suggest hospitals here.</p>
+        </div>
+        <a href="{% url 'hospital' %}" style="border-radius: 20%"
+          class="btn btn-primary btn-lg mx-auto mb-3"><b>Find</b></a>
+      </div>
+      <div class="card mx-auto mb-4 border-0 amol2" style="width: 18rem;">
+        <img class="card-img-top mx-auto" style="width: 161px" src="{% static 'images/oie_7214217T2POpRBE.gif' %}"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">Want a doctor ?</h5>
+          <p class="card-text text-center">we suggest doctors.</p>
+        </div>
+        <a href="{% url 'doctor' %}" style="border-radius: 20%"
+          class="btn btn-primary btn-lg mx-auto mb-3"><b>Search</b></a>
+      </div>
+      <div class="card mx-auto mb-4 border-0 amol3" style="width: 18rem;">
+        <img class="card-img-top mx-auto" style="width: 161px" src="{% static 'images/oie_7213932rU50mKGp.gif' %}"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">Consult online. </h5>
+          <p class="card-text text-center">Ask a Doctor.</p>
+        </div>
+        <a href="/enq" style="border-radius: 20%" class="btn btn-primary btn-lg mx-auto mb-3"><b>Enquire</b></a>
+      </div>
+      <div class="card mx-auto mb-4 border-0 amol4" style="width: 18rem;">
+        <img class="card-img-top mx-auto" style="width: 161px" src="{% static 'images/oie_7213456xcC4x0K4.gif' %}"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">Need Medicines?</h5>
+          <p class="card-text text-center"> we suggest medicines</p>
+        </div>
+        <a href="{% url 'medicine' %}" style="border-radius: 20%"
+          class="btn btn-primary btn-lg mx-auto mb-3"><b>Checkout</b></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='subs' style="background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);;">
+  <div class="row rounded">
+    <div class="container-fluid mr-0 mt-5" style="height:250px;width:300px;background-color:transparent">
+      <p class="mx-auto">
+        <h2 style="color: aliceblue"> Get latest news articles <br> about health and medical fields.</h2>
+      </p>
+    </div>
+    <div class="container-fluid mx-auto" style="height:250px;width:400px;background-color:transparent">
+      <center> <img class="mt-2" src="{% static 'images/msg.png' %}" style="width: 50px" alt=""></center>
+      <h4 class="text-center text-white mt-2"
+        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+        Subscribe to Newsletters and articles </h4>
+      <form method="POST" action="/subscr/">
+        {% csrf_token %}
+        <div class="row">
+          <input type="email" placeholder="Enter email"style="border-radius: 15px" class="form-control ml-4 mx-auto mt-2" name="email"
+            id="subscribe" required>
+          <button style="border-radius: 10px;margin-left: 150px;margin-top: 10px"
+            class="btn btn-warning">Subscribe</button>
+        </div>
+      </form>
+      <br><br>
+    </div>
+  </div>
+  
+</div>
+<!--
+<br>
+<center>
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="card mx-auto my-3 mb-4 " style=" width: 300px; border-radius: 8%;  background: -webkit-linear-gradient(to right, #d3cce3, #e9e4f0); /* Chrome 10-25, Safari 5.1-6 */
+          ;height: auto">
+            <div class="card-body"><span class="badge badge-dark"></span>
+              <h3 class="card-title text-center" style="color: crimson"></h3>
+              <p class="card-text text-center" style="font-style: italic">
+              </p>
+              
+            </div>
+          </div>
+          <div class="card mx-auto my-3 mb-4 " style=" width: 300px; border-radius: 12%; background-color: #F8F9FA">
+
+
+            <div class="card-body"><span class="badge badge-dark"></span>
+              <h3 class="card-title text-center" style="color: crimson"></h3>
+              <p class="card-text text-center" style="font-style: italic">
+              </p>
+              <p class="card-footer badge-success  "
+                style="font-size:18px;width:fit-content;margin-left: 80px; height:40px;color:floralwhite;">
+                <b></b>
+              </p>
+            </div>
+          </div>
+          <div class="card mx-auto my-3 mb-4 " style=" width: 300px; border-radius: 12%; background-color: #F8F9FA">
+
+
+            <div class="card-body"><span class="badge badge-dark"></span>
+              <h3 class="card-title text-center" style="color: crimson"></h3>
+              <p class="card-text text-center" style="font-style: italic">
+              </p>
+              <p class="card-footer badge-success  "
+                style="font-size:18px;width:fit-content;margin-left: 80px; height:40px;color:floralwhite;">
+                <b></b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="card mx-auto my-3 mb-4 " style=" width: 300px; border-radius: 12%; background-color: #F8F9FA">
+            <div class="card-body"><span class="badge badge-dark"></span>
+              <h3 class="card-title text-center" style="color: crimson"></h3>
+              <p class="card-text text-center" style="font-style: italic">
+              </p>
+              <p class="card-footer badge-success  "
+                style="font-size:18px;width:fit-content;margin-left: 80px; height:40px;color:floralwhite;">
+                <b></b>
+              </p>
+            </div>
+          </div>
+          <div class="card mx-auto my-3 mb-4 " style=" width: 300px; border-radius: 12%; background-color: #F8F9FA">
+
+
+            <div class="card-body"><span class="badge badge-dark"></span>
+              <h3 class="card-title text-center" style="color: crimson"></h3>
+              <p class="card-text text-center" style="font-style: italic">
+              </p>
+              <p class="card-footer badge-success  "
+                style="font-size:18px;width:fit-content;margin-left: 80px; height:40px;color:floralwhite;">
+                <b></b>
+              </p>
+            </div>
+          </div>
+          <div class="card mx-auto my-3 mb-4 " style=" width: 300px; border-radius: 12%; background-color: #F8F9FA">
+
+
+            <div class="card-body"><span class="badge badge-dark"></span>
+              <h3 class="card-title text-center" style="color: crimson"></h3>
+              <p class="card-text text-center" style="font-style: italic">
+              </p>
+              <p class="card-footer badge-success  "
+                style="font-size:18px;width:fit-content;margin-left: 80px; height:40px;color:floralwhite;">
+                <b></b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="card mx-auto my-3 mb-4 " style=" width: 300px; border-radius: 12%; background-color: #F8F9FA">
+            <div class="card-body"><span class="badge badge-dark"></span>
+              <h3 class="card-title text-center" style="color: crimson"></h3>
+              <p class="card-text text-center" style="font-style: italic">
+              </p>
+              <p class="card-footer badge-success  "
+                style="font-size:18px;width:fit-content;margin-left: 80px; height:40px;color:floralwhite;">
+                <b></b>
+              </p>
+            </div>
+          </div>
+          <div class="card mx-auto my-3 mb-4 " style=" width: 300px; border-radius: 12%; background-color: #F8F9FA">
+
+
+            <div class="card-body"><span class="badge badge-dark"></span>
+              <h3 class="card-title text-center" style="color: crimson"></h3>
+              <p class="card-text text-center" style="font-style: italic">
+              </p>
+              <p class="card-footer badge-success  "
+                style="font-size:18px;width:fit-content;margin-left: 80px; height:40px;color:floralwhite;">
+                <b></b>
+              </p>
+            </div>
+          </div>
+          <div class="card mx-auto my-3 mb-4 " style=" width: 300px; border-radius: 12%; background-color: #F8F9FA">
+
+
+            <div class="card-body"><span class="badge badge-dark"></span>
+              <h3 class="card-title text-center" style="color: crimson"></h3>
+              <p class="card-text text-center" style="font-style: italic">
+              </p>
+              <p class="card-footer badge-success  "
+                style="font-size:18px;width:fit-content;margin-left: 80px; height:40px;color:floralwhite;">
+                <b></b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>-->
+{% endblock content %}

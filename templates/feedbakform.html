@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'amlu/vendor/bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'amlu/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'amlu/vendor/animate/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'amlu/vendor/css-hamburgers/hamburgers.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'amlu/vendor/animsition/css/animsition.min.css' %} ">
+<link rel="stylesheet" type="text/css" href="{% static 'amlu/vendor/select2/select2.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'amlu/vendor/daterangepicker/daterangepicker.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'amlu/css/util.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'amlu/css/mainamit.css' %}">
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form action="/feedbacksave/" class="login100-form validate-form p-l-55 p-r-55 p-t-178" method="POST">
+                {% csrf_token %}
+                <span class="login100-form-title">
+                    Feedback Form
+                </span>
+                <div class="wrap-input100  m-b-16">
+                    <input class="input100" required type="text" name="username" id="id_username"
+                        placeholder="Username">
+                    <span class="focus-input100"></span>
+                </div>
+                <br>
+                <div class="wrap-input100  m-b-16">
+                   <textarea name="feedback" placeholder="Feedback" class="input100" id="feedback" cols="40" rows="50"></textarea>
+                    <span class="focus-input100"></span>
+            </div>
+            <br>
+                <div class="container-login100-form-btn p-b-30">
+                    <button class="login100-form-btn">
+                        Submit
+                    </button>
+                    <input type="hidden" name="next" value="{{ next }}" />
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+<script src="{% static 'amlu/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'amlu/vendor/animsition/js/animsition.min.js' %}"></script>
+<script src="{% static 'amlu/vendor/bootstrap/js/popper.js' %}"></script>
+<script src="{% static 'amlu/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'amlu/vendor/select2/select2.min.js' %}"></script>
+<script src="{% static 'amlu/vendor/daterangepicker/moment.min.js' %}"></script>
+<script src="{% static 'amlu/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<script src="{% static 'amlu/vendor/countdowntime/countdowntime.js' %}"></script>
+<script src="{% static 'amlu/js/main.js' %}"></script>
+
+
+{% endblock content %}

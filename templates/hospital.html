@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1 align="center">
+    Find Hospitals
+</h1>
+<br>
+<div class="container ">
+    <div class="row">
+        <div class="shadow col-sm"
+            style="background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);border-radius: 10px;">
+            <form action="/hospitallist/" method="POST">
+                {% csrf_token %}
+                <h4 align="center"><span style="background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%)"
+                        class="badge  badge-info mt-2"> By Location</span></h4>
+                <p align="center"><select id="loc" name="location" class="mt-2">
+                        <option value="ratnagiri">Ratnagiri</option>
+                        <option value="chiplun">Chiplun</option>
+                        <option value="Khed">Khed</option>
+                        <option value="dapoli">Dapoli</option>
+                    </select>
+                    <h3 align="center">
+                        <!--<button onclick="getresult()" class="btn  btn-light"><span>Search</span></button>-->
+                        <button class="btn  btn-light"><span>Search</span></button>
+                    </h3>
+                </p>
+            </form>
+        </div>
+        <div class="shadow col-sm ml-4"
+            style="background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);border-radius: 10px;">
+            <form action="/hospitallist/" method="POST">
+                {% csrf_token %}
+                <h4 align="center"><span style="background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%)"
+                        class="badge  badge-info mt-2"> By Speciality</span></h4>
+                <p align="center"><select name="speciality" class="mt-2">
+                        <option value="All">All</option>
+                        <option value="Gynaecology">Gynaecology</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                        <option value="Eye">Eye</option>
+                        <option value="Heart">Heart</option>
+                    </select>
+                    <h3 align="center"><button class="btn btn-light"><span>Search</span></button></h3>
+                </p>
+            </form>
+        </div>
+        <div class="shadow col-sm ml-4"
+            style="background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);border-radius: 10px;">
+            <form action="/hospitallist/" method="POST">
+                {% csrf_token %}
+                <h4 align="center"><span style="background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%)"
+                        class="badge  badge-info mt-2"> By Rating</span></h4>
+                <p align="center"><select name="rating" class="mt-2">
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                    <h3 align="center"><button class="btn btn-light"><span>Search</span></button></h3>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<h3 align="center">Our Recommendations </h3>
+<br>
+<br>
+<center>
+    <div class="" style="height:auto;width: 1000px">
+        <div class="row">
+            <div class="card  mt-2 mx-auto mb-3" style="width: 20rem;border-radius: 10%;">
+                <img class="card-img-top mt-2 mx-auto" style="width:70px;object-fit: cover;"
+                    src="{% static 'images/2001686.svg' %}" alt="Card image cap">
+                {% csrf_token %}
+                <div class="card-body">
+                    <h3 align="center" class="card-title "> Parkar Hospital </h3>
+                    <p align="center" class="card-text"> Maruti Mandir
+                        <br>
+                        Time: 9:00 AM to 12:00 AM
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li align="center" class="list-group-item">4</li>
+                    <li align="center" class="list-group-item">9087654329</li>
+                    <li align="center" class="list-group-item">All</li>
+                </ul>
+                <a href="{% url 'amol' h_name='Parkar Hospital' %}" class="btn btn-primary">More Details</a>
+            </div>
+            <div class="card  mt-2 mx-auto mb-3" style="width: 20rem;border-radius: 10%;">
+                <img class="card-img-top mt-2 mx-auto" style="width:70px;object-fit: cover;"
+                    src="{% static 'images/2001686.svg' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h3 align="center" class="card-title ">Parkar Hospital </h3>
+                    <p align="center" class="card-text"> Maruti Mandir
+                        <br>
+                        Time: 9:00 AM to 12:00 AM
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li align="center" class="list-group-item">4</li>
+                    <li align="center" class="list-group-item">9087654329 </li>
+                    <li align="center" class="list-group-item">All</li>
+                </ul>
+                <a href="{% url 'amol' h_name='Parkar Hospital' %}" class="btn btn-primary">More Details</a>
+            </div>
+            <div class="card  mt-2 mx-auto mb-3" style="width: 20rem;border-radius: 10%;">
+                <img class="card-img-top mt-2 mx-auto" style="width:70px;object-fit: cover;"
+                    src="{% static 'images/2001686.svg' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h3 align="center" class="card-title ">Parkar Hospital </h3>
+                    <p align="center" class="card-text"> Maruti Mandir
+                        <br>
+                        Time: 9:00 AM to 12:00 AM
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li align="center" class="list-group-item">4</li>
+                    <li align="center" class="list-group-item">9087654329</li>
+                    <li align="center" class="list-group-item">All</li>
+                </ul>
+                <a href="{% url 'amol' h_name='Parkar Hospital' %}" class="btn btn-primary">More Details</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</center>
+<!--
+<script>
+    function getresult() {
+        var location = document.getElementById("loc");
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+
+        window.open("/hospitallist/" + location.value, "_top");
+    }
+</script>-->
+</body>
+
+</html>
+{% endblock %}

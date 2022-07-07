@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+@media only screen and (max-width: 320px) {
+            .col-sm{
+                width:268px;
+            }
+            }
+        }
+</style>
+<h1 align="center">
+    Find Doctors
+</h1>
+<br>
+<div class="container ">
+    <div class="row">
+        <div class="shadow col-sm ml-4 mb-3"
+            style="background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);border-radius: 10px;">
+            <form action="/doctorlist/" method="POST">
+                {% csrf_token %}
+                <h4 align="center"><span
+                        style="margin-top: 10px;background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);"
+                        class="badge badge-pill badge-info mt-2"> By Location</span></h4>
+                <p align="center"><select name="location" class="mt-2">
+                        <option value="ratnagiri">Ratnagiri</option>
+                        <option value="chiplun">Savarde</option>
+                        <option value="lanja">Lanja</option>
+                    </select>
+                    <h3 align="center"><button class="btn btn-light"><span>Search</span></button></h3>
+                </p>
+            </form>
+        </div>
+        <div class="shadow col-sm ml-4 mb-3"
+            style="background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);border-radius: 10px;">
+            <form action="/doctorlist/" method="post">
+                {% csrf_token %}
+                <h4 align="center"><span style="background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);"
+                        class="badge badge-pill badge-info mt-2"> By Speciality</span></h4>
+                <p align="center"><select name="speciality" class="mt-2">
+                        <option value="Physician">Physician</option>
+                        <option value="Gynaecologist">Gynaecologist</option>
+                        <option value="Pediatrician">Pediatrician</option>
+                    </select>
+                    <h3 align="center"><button class="btn btn-light"><span>Search</span></button></h3>
+                </p>
+            </form>
+        </div>
+        <div class="shadow col-sm ml-4 mb-3"
+            style="background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);border-radius: 10px;">
+            <form action="/doctorlist/" method="post">
+                {% csrf_token %}
+                <h4 align="center"><span style="background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);"
+                        class="badge badge-pill badge-info mt-2"> By Experience</span></h4>
+                <p align="center"><select name="experience" class="mt-2">
+                        <option value="5">Below 5 Yrs</option>
+                        <option value="10">5-10 Yrs</option>
+                        <option value="15">10-15 Yrs</option>
+                        <option value="20">15-20 Yrs</option>
+                    </select>
+                    <h3 align="center"><button class="btn btn-light"><span>Search</span></button></h3>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<mark>
+    <h3 align="center">Our Recommendations</h3>
+</mark>
+<br>
+<br>
+<div class="row mb-5">
+    <div class="card ml-5 mt-2 mx-3" style="border-radius: 15px;width: 18rem;">
+        <img class="card-img-top mt-2 mx-auto" style="width:100px;border-radius: 50%;object-fit: cover;"
+            src="{% static 'images/male.svg' %}" alt="Card image cap">
+        <div class="card-body">
+            <h5 align="center" class="card-title ">Dr. Vemon </h5>
+            <p align="center" class="card-text"> 58 Malgund near bus stand
+                <br>
+                7045679812
+            </p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li align="center" class="list-group-item">Dermatologist</li>
+            <li align="center" class="list-group-item">MBBS , MD </li>
+            <li align="center" class="list-group-item">8+ Yrs Exp</li>
+        </ul>
+    </div>
+    <div class="card ml-3 mt-2 mx-3" style="border-radius: 15px;width: 18rem;">
+        <img class="card-img-top mt-2 mx-auto" style="width:100px;border-radius: 50%;object-fit: cover;"
+            src="{% static 'images/female.svg' %}" alt="Card image cap">
+        <div class="card-body">
+            <h5 align="center" class="card-title ">Dr. Lila Mulye </h5>
+            <p align="center" class="card-text"> Near Bus Stand Ratnagiri
+                <br>
+                8045679812
+            </p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li align="center" class="list-group-item">Gynaeclogist</li>
+            <li align="center" class="list-group-item">MBBS , MD </li>
+            <li align="center" class="list-group-item">6+ Yrs Exp</li>
+        </ul>
+    </div>
+    <div class="card ml-3 mt-2 mx-3" style="border-radius: 15px;width: 18rem;">
+        <img class="card-img-top mt-2 mx-auto" style="width:100px;border-radius: 50%;object-fit: cover;"
+            src="{% static 'images/male.svg' %}" alt="Card image cap">
+        <div class="card-body">
+            <h5 align="center" class="card-title ">Dr. Sanket Sakpal </h5>
+            <p align="center" class="card-text"> Khed bajarapeth
+                <br>
+                7045679812
+            </p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li align="center" class="list-group-item">Physician</li>
+            <li align="center" class="list-group-item">MBBS , MD </li>
+            <li align="center" class="list-group-item">8+ Yrs Exp</li>
+        </ul>
+    </div>
+    <div class="card ml-3 mt-2 mx-3" style="border-radius: 15px;width: 18rem;">
+        <img class="card-img-top mt-2 mx-auto" style="width:100px;border-radius: 50%;object-fit: cover;"
+            src="{% static 'images/female.svg' %}" alt="Card image cap">
+        <div class="card-body">
+            <h5 align="center" class="card-title ">Dr. Kirti Kartik</h5>
+            <p align="center" class="card-text"> Lanja Varchi Peth
+                <br>
+                7045679812
+            </p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li align="center" class="list-group-item">Dentist</li>
+            <li align="center" class="list-group-item">MBBS , MD </li>
+            <li align="center" class="list-group-item">10+ Yrs Exp</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="height: auto">
+    <center>
+        <h1 class="mt-4">Consult Doctor Online</h1>
+    </center>
+    <div class="container ">
+        <div class="row">
+            <div class="shadow col-sm ml-5 mb-5"
+                style="background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);border-radius: 10px;">
+                <form action="/doctorlist/" method="POST">
+                    {% csrf_token %}
+                    <h4 align="center"><span
+                            style="margin-top: 0px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);;"
+                            class="badge badge-pill badge-info mt-0"> Cardiologist</span></h4>
+                    <p align="center">
+                        <div style="float: left" class=" mt-0">
+                            <center> <img class="card-img-top mt-0 mx-auto"
+                                    style="width:50px;border-radius: 50%;object-fit: cover;"
+                                    src="{% static 'images/387569.svg' %}" alt="Card image cap"></center>
+                            <h5 style="color: tomato"> Dr. Madhavi Mulye </h5>
+                            <br>
+                            <p class="text-center"> <b>
+                                    MBBS MD
+                                    <br>
+                                    5+ Yrs</b></p>
+                        </div>
+                        <div style="float:right" class=" mt-0">
+                            <center> <img class="card-img-top mt-0 mx-auto"
+                                    style="width:50px;border-radius: 50%;object-fit: cover;"
+                                    src="{% static 'images/doclogo.svg' %}" alt="Card image cap"></center>
+                            <h5 style="color: tomato"> Dr. Samir Patankar </h5>
+                            <br>
+                            <p class="text-center"> <b>
+                                    MBBS MD
+                                    <br>
+                                    5+ Yrs</b></p>
+                        </div>
+                    </p>
+                </form>
+            </div>
+            <div class="shadow col-sm ml-5 mb-5"
+                style="background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);border-radius: 10px;">
+                <form action="/doctorlist/" method="POST">
+                    {% csrf_token %}
+                    <h4 align="center"><span
+                            style="margin-top: 0px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);;"
+                            class="badge badge-pill badge-info mt-0">Physician</span></h4>
+                    <p align="center">
+                        <div style="float: left" class="mt-0">
+                            <center> <img class="card-img-top mt-0 mx-auto"
+                                    style="width:50px;border-radius: 50%;object-fit: cover;"
+                                    src="{% static 'images/doclogo.svg' %}" alt="Card image cap"></center>
+                            <h5 style="color: tomato"> Dr. Dilip Bhosale </h5>
+                            <br>
+                            <p class="text-center"> <b>
+                                    MBBS MD
+                                    <br>
+                                    5+ Yrs</b></p>
+                        </div>
+                        <div style="float:right" class=" mt-0">
+                            <center> <img class="card-img-top mt-0 mx-auto"
+                                    style="width:50px;border-radius: 50%;object-fit: cover;"
+                                    src="{% static 'images/doclogo.svg' %}" alt="Card image cap"></center>
+                            <h5 style="color: tomato"> Dr. Mandar Gorivale </h5>
+                            <br>
+                            <p class="text-center"> <b>
+                                    MBBS MD
+                                    <br>
+                                    5+ Yrs</b></p>
+                        </div>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="shadow col-sm ml-5 mb-5"
+                style="background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);border-radius: 10px;">
+                <form action="/doctorlist/" method="POST">
+                    {% csrf_token %}
+                    <h4 align="center"><span
+                            style="margin-top: 0px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);;"
+                            class="badge badge-pill badge-info mt-0"> Dermatologist</span></h4>
+                    <p align="center">
+                        <div style="float: left" class=" mt-0">
+                            <center> <img class="card-img-top mt-0 mx-auto"
+                                    style="width:50px;border-radius: 50%;object-fit: cover;"
+                                    src="{% static 'images/doclogo.svg' %}" alt="Card image cap"></center>
+                            <h5 style="color: tomato"> Dr. Mahesh Paranjape </h5>
+                            <br>
+                            <p class="text-center"> <b>
+                                    MBBS MD
+                                    <br>
+                                    5+ Yrs</b></p>
+                        </div>
+                        <div style="float:right" class=" mt-0">
+                            <center> <img class="card-img-top mt-0 mx-auto"
+                                    style="width:50px;border-radius: 50%;object-fit: cover;"
+                                    src="{% static 'images/doclogo.svg' %}" alt="Card image cap"></center>
+                            <h5 style="color: tomato"> Dr. Anand Dhole </h5>
+                            <br>
+                            <p class="text-center"> <b>
+                                    MBBS MD
+                                    <br>
+                                    5+ Yrs</b></p>
+                        </div>
+                    </p>
+                </form>
+            </div>
+            <div class="shadow col-sm ml-5 mb-5"
+                style="background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);border-radius: 10px;">
+                <form action="/doctorlist/" method="POST">
+                    {% csrf_token %}
+                    <h4 align="center"><span
+                            style="margin-top: 0px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);;"
+                            class="badge badge-pill badge-info mt-0"> Gynaecologist</span></h4>
+                    <p align="center">
+                        <div style="float: left" class=" mt-0">
+                            <center> <img class="card-img-top mt-0 mx-auto"
+                                    style="width:50px;border-radius: 50%;object-fit: cover;"
+                                    src="{% static 'images/387569.svg' %}" alt="Card image cap"></center>
+                            <h5 style="color: tomato"> Dr. Manasi Deshmukh </h5>
+                            <br>
+                            <p class="text-center"> <b>
+                                    MBBS MD
+                                    <br>
+                                    5+ Yrs</b></p>
+                        </div>
+                        <div style="float:right" class=" mt-0">
+                            <center> <img class="card-img-top mt-0 mx-auto"
+                                    style="width:50px;border-radius: 50%;object-fit: cover;"
+                                    src="{% static 'images/387569.svg' %}" alt="Card image cap"></center>
+                            <h5 style="color: tomato"> Dr. Riya Pawar </h5>
+                            <br>
+                            <p class="text-center"> <b>
+                                    MBBS MD
+                                    <br>
+                                    5+ Yrs</b></p>
+                        </div>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <center>
+        <div class="row" style="margin-left: 500px">
+            <form action="/submit_query/" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="user_name" value="{{ user }}">
+                <h4>Choose Doctor </h4>
+                <select name="doctor" id="doctor" class="mt-2">
+                    <option value="madhavi">Dr. Madhavi</option>
+                    <option value="samir">Dr. Samir</option>
+                    <option value="dilip">Dr. Dilip</option>
+                    <option value="mandar">Dr. Mandar</option>
+                    <option value="mahesh">Dr. Mahesh</option>
+                    <option value="anand">Dr.Anand</option>
+                    <option value="manasi">Dr. Manasi</option>
+                    <option value="riya">Riya</option>
+                </select>
+                <textarea style="border-radius: 15px" class="mt-3 form-control" name="query" id="query"
+                    placeholder="Query" cols="30" rows="2" required></textarea>
+                <input type="submit" class="btn-lg btn-primary mt-3 mb-3" value="submit">
+            </form>
+        </div>
+    </center>
+</div>
+{% endblock %}

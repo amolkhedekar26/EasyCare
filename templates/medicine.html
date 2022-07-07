@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1 align="center">
+    Search Medicines On the Go
+</h1>
+<div class="  p-4 mt-3 mb-4   ">
+    <div class="row shadow-sm"
+        style="border-radius: 15px;background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);height: auto;">
+        <div class="card mx-auto border-0 mt-4" style="width: 18rem;background: transparent">
+            <form method="POST" action="/medicinelist/">
+                {% csrf_token %}
+                <center> <img class="card-img-top mx-auto" style="width: 100px" src="{% static 'images/thecold.svg' %}"
+                        alt="Card image cap"></center><br>
+                <center><input class="btn btn-success mb-3" style="font-size: 20px;border-radius: 10px" type="submit"
+                        name="cold" value="Cold" /></center>
+            </form>
+        </div>
+        <div class="card mx-auto border-0 mt-4" style="width: 18rem;background: transparent">
+            <form method="POST" action="/medicinelist/">
+                {% csrf_token %}
+                <center> <img class="card-img-top mx-auto" style="width: 100px"
+                        src="{% static 'images/thefever1.svg' %}" alt="Card image cap"></center><br>
+                <center><input class="btn btn-success" style="font-size: 20px;border-radius: 10px" type="submit"
+                        name="fever" value="Fever" /></center>
+            </form>
+        </div>
+        <div class="card mx-auto border-0 mt-4" style="width: 18rem;background: transparent">
+            <form method="POST" action="/medicinelist/">
+                {% csrf_token %}
+                <center> <img class="card-img-top mx-auto" style="width: 100px" src="{% static 'images/thecough.svg' %}"
+                        alt="Card image cap"></center><br>
+                <center><input class="btn btn-success" style="font-size: 20px;border-radius: 10px" type="submit"
+                        name="cough" value="Cough" /></center>
+            </form>
+        </div>
+        <div class="card mx-auto border-0 mt-4" style="width: 18rem;background: transparent">
+            <form method="POST" action="/medicinelist/">
+                {% csrf_token %}
+                <center> <img class="card-img-top mx-auto" style="width: 100px"
+                        src="{% static 'images/theheadache1.svg' %}" alt="Card image cap"></center><br>
+                <center><input class="btn btn-success" style="font-size: 20px;border-radius: 10px" type="submit"
+                        name="headache" value="Headache" /></center>
+            </form>
+        </div>
+        <hr>
+        <div class="card mx-auto border-0 mt-4" style="width: 18rem;background: transparent">
+            {% csrf_token %}
+            <center> <img class="card-img-top mx-auto" style="width: 100px" src="{% static 'images/theacne.svg' %}"
+                    alt="Card image cap"></center><br>
+            <center><a href="{% url 'med' m_dis='acne' %}" style="font-size: 20px;border-radius: 10px"
+                    class="btn btn-success">Acne</a></center>
+        </div>
+        <div class="card mx-auto border-0 mt-4" style="width: 18rem;background: transparent">
+            <form method="POST" action="/medicinelist/">
+                {% csrf_token %}
+                <center> <img class="card-img-top mx-auto" style="width: 100px" src="{% static 'images/theheart.svg' %}"
+                        alt="Card image cap"></center><br>
+                <center><a href="{% url 'med' m_dis='heart attack' %}" style="font-size: 20px;border-radius: 10px"
+                        class="btn btn-success">Heart Attack</a></center>
+            </form>
+        </div>
+        <div class="card mx-auto border-0 mt-4" style="width: 18rem;background: transparent">
+            <form method="POST" action="/medicinelist/">
+                {% csrf_token %}
+                <center> <img class="card-img-top mx-auto" style="width: 100px"
+                        src="{% static 'images/themuscle.svg' %}" alt="Card image cap"></center><br>
+                <center><a href="{% url 'med' m_dis='muscle pain' %}" style="font-size: 20px;border-radius: 10px"
+                        class="btn btn-success">Muscle Pain</a></center>
+            </form>
+        </div>
+        <div class="card mx-auto border-0 mt-4" style="width: 18rem;background: transparent">
+            <form method="POST" action="/medicinelist/">
+                {% csrf_token %}
+                <center> <img class="card-img-top mx-auto" style="width: 100px"
+                        src="{% static 'images/thefatigue.svg' %}" alt="Card image cap"></center><br>
+                <center><a href="{% url 'med' m_dis='fatigue' %}" style="font-size: 20px;border-radius: 10px"
+                        class="btn btn-success">Fatigue</a></center>
+            </form>
+        </div>
+        <hr>
+        <div class="card mx-auto border-0 mt-4 mb-4" style="width: 18rem;background: transparent">
+            <form method="POST" action="/medicinelist/">
+                {% csrf_token %}
+                <center> <img class="card-img-top mx-auto" style="width: 100px"
+                        src="{% static 'images/thestomache.svg' %}" alt="Card image cap"></center><br>
+                <center><a href="{% url 'med' m_dis='stomache' %}" style="font-size: 20px;border-radius: 10px"
+                        class="btn btn-success">Stomache</a></center>
+            </form>
+        </div>
+        <div class="card mx-auto border-0 mt-4" style="width: 18rem;background: transparent">
+            <form method="POST" action="/medicinelist/">
+                {% csrf_token %}
+                <center> <img class="card-img-top mx-auto" style="width: 100px"
+                        src="{% static 'images/thethroat.svg' %}" alt="Card image cap"></center><br>
+                <center><a href="{% url 'med' m_dis='throat' %}" style="font-size: 20px;border-radius: 10px"
+                        class="btn btn-success">Throat</a></center>
+            </form>
+        </div>
+        <div class="card mx-auto border-0 mt-4" style="width: 18rem;background: transparent">
+            <form method="POST" action="/medicinelist/">
+                {% csrf_token %}
+                <center> <img class="card-img-top mx-auto" style="width: 100px" src="{% static 'images/thecough.svg' %}"
+                        alt="Card image cap"></center><br>
+                <center><a href="{% url 'med' m_dis='acne' %}" style="font-size: 20px;border-radius: 10px"
+                        class="btn btn-success">Acne</a></center>
+            </form>
+        </div>
+        <div class="card mx-auto border-0 mt-4" style="width: 18rem;background: transparent">
+            <form method="POST" action="/medicinelist/">
+                {% csrf_token %}
+                <center> <img class="card-img-top mx-auto" style="width: 100px"
+                        src="{% static 'images/theheadache1.svg' %}" alt="Card image cap"></center><br>
+                <center><a href="{% url 'med' m_dis='acne' %}" style="font-size: 20px;border-radius: 10px"
+                        class="btn btn-success">Acne</a></center>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}
