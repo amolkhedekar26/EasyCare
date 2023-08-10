@@ -12,7 +12,6 @@ Easycare - healthcare app is an Android app focuses on solving the problem of se
 - Admin can manage all data.
 - Backend - Django REST API
 - Frontend - Android App using Java
-- 
 Healthcare website that allows patient to find hospitals, dctors, search medicines and consult the doctors online.
 ![WhatsApp Image 2023-08-10 at 8 22 15 PM (1)](https://github.com/amolkhedekar26/EasyCare/assets/108868936/ee23071e-ed04-485c-9450-dbc99389d881)
 ![WhatsApp Image 2023-08-10 at 8 22 15 PM (2)](https://github.com/amolkhedekar26/EasyCare/assets/108868936/8ee167e5-0fc9-4d96-a731-7819f057f2ed)
